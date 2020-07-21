@@ -9,6 +9,9 @@ import'mdbreact/dist/css/mdb.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+require('dotenv').config()
+process.env.CI = false
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
