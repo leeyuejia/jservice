@@ -20,7 +20,10 @@ jobs:
 
       - name: Inject env variables
         run: |
-          echo REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }} >> .env
+          touch .env
+          echo SKIP_PREFLIGHT_CHECK=true >> .env
+
+# echo REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }} >> .env
       - name: Run the React.js build script
         run: npm run build
 
