@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { MDBBox, MDBInput,MDBBtn, MDBBtnGroup } from 'mdbreact';
+import { MDBBox, MDBInput,MDBBtn} from 'mdbreact';
 
 import DisplayResult from './DisplayResult'
 
