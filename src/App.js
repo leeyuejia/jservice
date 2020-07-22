@@ -6,7 +6,7 @@ import ScoreBoard from './component/ScoreBoard'
 import Question from './component/Question'
 import Selection from './component/Selection'
 
-const apiUrl = 'http://jservice.io/api/'
+const apiUrl = 'https://jservice.io/api/'
 const randomNumber = (max) => {
   return Math.floor(Math.random() * Math.floor(max))
 }
