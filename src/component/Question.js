@@ -49,18 +49,14 @@ class Question extends Component {
   //   })
   // }
   //// UNSURE HOW TO USE componentDidUpdate as data structure is different
-  //  async componentDidUpdate(prevProps) {
-  //       console.log(this.props.question.question)
-  //       console.log(prevProps.question.question)
-  //       if(this.props.question.question !== prevProps.question.question) {
-  //             await this.setState({
-  //               question: this.props.question,
-  //               displayAnswer : false,
-  //               submitAnswer: '',
-  //               category :this.props.category
-  //           })
-  //         }
-  //       }
+   async componentDidUpdate(prevProps) {
+        if(this.props.question.question !== prevProps.question.question) {
+              await this.setState({
+                displayAnswer : false,
+                submitAnswer: '',
+            })
+          }
+        }
   render() {
     const data = this.props.question
     const clue = this.clue(this.props.question.answer)
