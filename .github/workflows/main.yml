@@ -25,6 +25,9 @@ jobs:
           
       - name: Run the React.js build script
         run: npm run build
+        
+      - name: Serve static files
+        run: npm run start
 
       - name: Archive built files
         uses: actions/upload-artifact@master
@@ -56,6 +59,8 @@ jobs:
           git config --global user.name "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://${github_token}@github.com/${repository}
           npm run deploy
+          npm run start
         env:
           github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
+          
